@@ -42,7 +42,7 @@ Imagenet 1000 class dataset with 1.2 million images. Because this dataset is abo
 
 For this part, before you want to train your model, please read the suggestion from [Wei Wu](https://github.com/tornadomeet/ResNet) first. In his page, there is a very detailed information about how to prepare your data. 
 
-When you finised data preparation, please make sure the data locates the same folder of source codes. then you can
+When you finised data preparation, please make sure the data locates the same folder of source codes. You also need to change path of path_imgrec in line 92 and line 116 of train_densenet.py. Then you can
 run the training cmd just like this (here, I use 4 gpus for training):
 
 python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --depth 169 --batch-size 128 --growth-rate 32 --drop-out 0 --reduction 0.5 --gpus=6,7,8,9
