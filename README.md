@@ -6,5 +6,8 @@ This implementation only focus on imagenet'12 dataset. The training procedure is
 
 Their official implementation and many other third-party implementations can be found in the [liuzhuang13/DenseNet](https://github.com/liuzhuang13/DenseNet) repo on GitHub.
 
+
+
 This is a basic dense block (figure is modified from the [original paper](https://arxiv.org/pdf/1608.06993v3.pdf)). Each layer takes all preceding feature maps as input. It is a very interesting and simple design.
 
+![](dense-block.png)
