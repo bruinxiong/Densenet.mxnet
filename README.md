@@ -22,7 +22,7 @@ two version of PyTorch
 2. [Andreas Veit](https://github.com/andreasveit)
 (https://github.com/andreasveit/densenet-pytorch/blob/master/densenet.py)
 
-one version of MXNet (without BC structure)
+one version of MXNet (without BC structure and only for cifar10)
 
 3. [Nicatio](https://github.com/Nicatio)
 (https://github.com/Nicatio/Densenet/blob/master/mxnet/symbol_densenet.py)
@@ -45,9 +45,23 @@ For this part, before you want to train your model, please read the suggestion f
 When you finised data preparation, please make sure the data locates the same folder of source codes. then you can
 run the training cmd just like this (here, I use 4 gpus for training):
 
-python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --depth 50 --batch-size 256 --gpus=6,7,8,9
+python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --depth 169 --batch-size 128 --growth-rate 32 --drop-out 0 --reduction 0.5 --gpus=6,7,8,9
 
 Maybe you should change batch-size from 256 to 128 due to the memory size of GPU.
 
+#How to retrain
+When we want to train the large dataset and hope to change learning rate manually, or the machine is suddenly shutdown due to some reason, of course, we definitely hope we can continue to train model with previous trained weights. Then, your can use this cmd:
 
+python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --depth 169 --batch-size 128 --growth-rate 32 --drop-out 0 --reduction 0.5 --gpus=6,7,8,9 --model-load-epoch=50 --lr 0.001 --retrain
 
+This means you can retrain your densenet-169 model from epoch 50 and change lr=0.001 using 4 GPU.
+
+#Reference
+
+[1] Kaiming He, et al. "Deep Residual Learning for Image Recognition" arXiv:1512.03385v1
+[2] Kaiming He, et al. "Identity Mappings in Deep Residual Networks" arXiv:1603.05027v3
+[3] Gao Huang, et al. "Densely Connected Convolutional Networks" arXiv:1608.06993v3
+[4] PyTorch Implementation of DenseNet from [Brandon Amos](https://github.com/bamos/densenet.pytorch/blob/master/densenet.py)
+[5] PyTorch Implementation of DenseNet from [Andreas Veit](https://github.com/andreasveit/densenet-pytorch/blob/master/densenet.py)
+[6] MXNet Implementation of DenseNet from [Nicatio](https://github.com/Nicatio)
+[7] MXNet Implementation of ResNet from [tornadomeet, Wei Wu](https://github.com/tornadomeet/ResNet)
