@@ -35,6 +35,7 @@ Please fix the randomness if you want to train your own model and using [Wei Wu]
 #Data
 
 ImageNet'12 dataset
+
 Imagenet 1000 class dataset with 1.2 million images. Because this dataset is about 120GB, so you have to download by yourself. Sorry for this inconvenience.
 
 #How to Train
