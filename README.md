@@ -59,9 +59,15 @@ This means you can retrain your densenet-169 model from epoch 50 and change lr=0
 #Reference
 
 [1] Kaiming He, et al. "Deep Residual Learning for Image Recognition" arXiv:1512.03385v1
+
 [2] Kaiming He, et al. "Identity Mappings in Deep Residual Networks" arXiv:1603.05027v3
+
 [3] Gao Huang, et al. "Densely Connected Convolutional Networks" arXiv:1608.06993v3
+
 [4] PyTorch Implementation of DenseNet from [Brandon Amos](https://github.com/bamos/densenet.pytorch/blob/master/densenet.py)
+
 [5] PyTorch Implementation of DenseNet from [Andreas Veit](https://github.com/andreasveit/densenet-pytorch/blob/master/densenet.py)
+
 [6] MXNet Implementation of DenseNet from [Nicatio](https://github.com/Nicatio)
+
 [7] MXNet Implementation of ResNet from [tornadomeet, Wei Wu](https://github.com/tornadomeet/ResNet)
