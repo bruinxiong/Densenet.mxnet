@@ -4,7 +4,7 @@ This a [MxNet](http://mxnet.io/) implementation of DenseNet-BC architecture as d
 
 ![](title.png)
 
-This implementation only focus on imagenet'12 dataset. The training procedure is ongoing. So, I hope anyone who are mxnet fun can test this code with me. When I finish, I will update more information about training and validation.
+This implementation only focus on imagenet'12 dataset at present. The training procedure is ongoing. So, I hope anyone who are mxnet fun can test this code with me. When I finish, I will update more information about training and validation.
 
 Their official implementation and many other third-party implementations can be found in the [liuzhuang13/DenseNet](https://github.com/liuzhuang13/DenseNet) repo on GitHub.
 
@@ -21,7 +21,9 @@ two version of PyTorch
 (https://github.com/bamos/densenet.pytorch/blob/master/densenet.py)  
 2. [Andreas Veit](https://github.com/andreasveit)
 (https://github.com/andreasveit/densenet-pytorch/blob/master/densenet.py)
+
 one version of MxNet (without BC structure)
+
 3. [Nicatio](https://github.com/Nicatio)
 (https://github.com/Nicatio/Densenet/blob/master/mxnet/symbol_densenet.py)
 
