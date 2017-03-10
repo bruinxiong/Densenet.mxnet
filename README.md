@@ -14,7 +14,7 @@ This is a basic dense block (figure is modified from the [original paper](https:
 
 ![](dense-block.png)
 
-I very thanks [tornadomeet, Wei Wu](https://github.com/tornadomeet). This implementation of DenseNet is adapted from his [Resnet](https://github.com/tornadomeet/ResNet) codes. I also refered other third-part implementations, such as 
+I appreciate [tornadomeet, Wei Wu](https://github.com/tornadomeet). This implementation of DenseNet is adapted from his [Resnet](https://github.com/tornadomeet/ResNet) codes. I also refered other third-part implementations, such as 
 two version of PyTorch
 
 1. [Brandon Amos](https://github.com/bamos)
