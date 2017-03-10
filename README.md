@@ -29,7 +29,8 @@ one version of MXNet (without BC structure and only for cifar10)
 
 #Requirements
 
-Install MXNet on a mechine with CUDA GPU, and it's better also installed with [cuDNN v5](https://developer.nvidia.com/cudnn)
+Install MXNet on a mechine with CUDA GPU, and it's better also installed with [cuDNN v5](https://developer.nvidia.com/cudnn).
+
 Please fix the randomness if you want to train your own model and using [Wei Wu](https://github.com/dmlc/mxnet/pull/3001/files) solution.
 
 #Data
