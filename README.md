@@ -1,6 +1,6 @@
-# A MxNet implementation of DenseNet with BC structure
+# A MXNet implementation of DenseNet with BC structure
 
-This a [MxNet](http://mxnet.io/) implementation of DenseNet-BC architecture as described in the paper [Densely Connected Convolutional Networks](https://arxiv.org/pdf/1608.06993v3.pdf) by Gao Huang, Zhuang Liu, Kilian Q. Weinberger, Laurens van der Maaten.
+This a [MXNet](http://mxnet.io/) implementation of DenseNet-BC architecture as described in the paper [Densely Connected Convolutional Networks](https://arxiv.org/pdf/1608.06993v3.pdf) by Gao Huang, Zhuang Liu, Kilian Q. Weinberger, Laurens van der Maaten.
 
 ![](title.png)
 
@@ -22,8 +22,31 @@ two version of PyTorch
 2. [Andreas Veit](https://github.com/andreasveit)
 (https://github.com/andreasveit/densenet-pytorch/blob/master/densenet.py)
 
-one version of MxNet (without BC structure)
+one version of MXNet (without BC structure)
 
 3. [Nicatio](https://github.com/Nicatio)
 (https://github.com/Nicatio/Densenet/blob/master/mxnet/symbol_densenet.py)
+
+#Requirements
+
+Install MXNet on a mechine with CUDA GPU, and it's better also installed with [cuDNN v5](https://developer.nvidia.com/cudnn)
+Please fix the randomness if you want to train your own model and using [Wei Wu](https://github.com/dmlc/mxnet/pull/3001/files) solution.
+
+#Data
+
+ImageNet'12 dataset
+Imagenet 1000 class dataset with 1.2 million images. Because this dataset is about 120GB, so you have to download by yourself. Sorry for this inconvenience.
+
+#How to Train
+
+For this part, before you want to train your model, please read the suggestion from [Wei Wu](https://github.com/tornadomeet/ResNet) first. In his page, there is a very detailed information about how to prepare your data. 
+
+When you finised data preparation, please make sure the data locates the same folder of source codes. then you can
+run the training cmd just like this (here, I use 4 gpus for training):
+
+python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --depth 50 --batch-size 256 --gpus=6,7,8,9
+
+Maybe you should change batch-size from 256 to 128 due to the memory size of GPU.
+
+
 
