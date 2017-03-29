@@ -57,6 +57,10 @@ python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --dept
 
 This means you can retrain your densenet-169 model from epoch 50 and change lr=0.001 using 4 GPU.
 
+#Training curves
+We have finished densenet-169 on imagenet dataset. The following figure illustrates the training and validation curves.
+![](densenet169_curves_imagenet.png)
+
 #Reference
 
 [1] Kaiming He, et al. "Deep Residual Learning for Image Recognition" arXiv:1512.03385v1
