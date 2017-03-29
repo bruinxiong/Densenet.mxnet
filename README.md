@@ -61,6 +61,8 @@ This means you can retrain your densenet-169 model from epoch 50 and change lr=0
 We have finished densenet-169 on imagenet dataset. The following figure illustrates the training and validation curves.
 ![](densenet169_curves_imagenet.png)
 
+We also attached the log file for this training procedure.
+
 #Reference
 
 [1] Kaiming He, et al. "Deep Residual Learning for Image Recognition" arXiv:1512.03385v1
