@@ -51,6 +51,7 @@ python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --dept
 Maybe you should change batch-size from 256 to 128 due to the memory size of GPU.
 
 #How to retrain
+
 When we want to train the large dataset and hope to change learning rate manually, or the machine is suddenly shutdown due to some reason, of course, we definitely hope we can continue to train model with previous trained weights. Then, your can use this cmd:
 
 python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --depth 169 --batch-size 128 --growth-rate 32 --drop-out 0 --reduction 0.5 --gpus=6,7,8,9 --model-load-epoch=50 --lr 0.001 --retrain
@@ -58,12 +59,14 @@ python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --dept
 This means you can retrain your densenet-169 model from epoch 50 and change lr=0.001 using 4 GPU.
 
 #Training curves
+
 We have finished densenet-169 on imagenet dataset. The following figure illustrates the training and validation curves.
 ![](densenet169_curves_imagenet.png)
 
 We also attached the log file for this training procedure.
 
 #Pretrained model on imagenet 1k dataset (Update Jun 12, 2017)
+
 We provide the pretrained model trained on imagenet 1k dataset. 
 
 #Reference
