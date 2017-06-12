@@ -63,6 +63,9 @@ We have finished densenet-169 on imagenet dataset. The following figure illustra
 
 We also attached the log file for this training procedure.
 
+#Pretrained model on imagenet 1k dataset (Update Jun 12, 2017)
+We provide the pretrained model trained on imagenet 1k dataset. 
+
 #Reference
 
 [1] Kaiming He, et al. "Deep Residual Learning for Image Recognition" arXiv:1512.03385v1
