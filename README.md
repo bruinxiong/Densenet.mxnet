@@ -27,19 +27,19 @@ one version of MXNet (without BC structure and only for cifar10)
 3. [Nicatio](https://github.com/Nicatio)
 (https://github.com/Nicatio/Densenet/blob/master/mxnet/symbol_densenet.py)
 
-#Requirements
+## Requirements
 
 Install MXNet on a mechine with CUDA GPU, and it's better also installed with [cuDNN v5](https://developer.nvidia.com/cudnn).
 
 Please fix the randomness if you want to train your own model and using [Wei Wu](https://github.com/dmlc/mxnet/pull/3001/files) solution.
 
-#Data
+## Data
 
 ImageNet'12 dataset
 
 Imagenet 1000 class dataset with 1.2 million images. Because this dataset is about 120GB, so you have to download by yourself. Sorry for this inconvenience.
 
-#How to Train
+## How to Train
 
 For this part, before you want to train your model, please read the suggestion from [Wei Wu](https://github.com/tornadomeet/ResNet) first. In his page, there is a very detailed information about how to prepare your data. 
 
@@ -50,7 +50,7 @@ python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --dept
 
 Maybe you should change batch-size from 256 to 128 due to the memory size of GPU.
 
-#How to retrain
+## How to retrain
 
 When we want to train the large dataset and hope to change learning rate manually, or the machine is suddenly shutdown due to some reason, of course, we definitely hope we can continue to train model with previous trained weights. Then, your can use this cmd:
 
@@ -58,18 +58,18 @@ python -u train_densenet.py --data-dir data/imagenet --data-type imagenet --dept
 
 This means you can retrain your densenet-169 model from epoch 50 and change lr=0.001 using 4 GPU.
 
-#Training curves
+## Training curves
 
 We have finished densenet-169 on imagenet dataset. The following figure illustrates the training and validation curves.
 ![](densenet169_curves_imagenet.png)
 
 We also attached the log file for this training procedure.
 
-#Pretrained model on imagenet 1k dataset (Update Jun 12, 2017)
+**Pretrained model on imagenet 1k dataset (Update Jun 12, 2017)**
 
 We provide the pretrained model trained on imagenet 1k dataset. The json file of densenet-imagenet-169 can be found in master folder. The parameter file can be found in [here](https://drive.google.com/open?id=0B_M7XF_l0CzXX3V3WXJoUnNKZFE).
 
-#Reference
+## Reference
 
 [1] Kaiming He, et al. "Deep Residual Learning for Image Recognition" arXiv:1512.03385v1
 
