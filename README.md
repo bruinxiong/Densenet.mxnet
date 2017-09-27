@@ -65,7 +65,7 @@ We have finished densenet-169 on imagenet dataset. The following figure illustra
 
 We also attached the log file for this training procedure.
 
-**Pretrained model on imagenet 1k dataset (Update Jun 12, 2017)**
+**Pretrained model on imagenet 1k dataset (Updated at Jun 12, 2017)**
 
 We provide the pretrained model trained on imagenet 1k dataset. The json file of densenet-imagenet-169 can be found in master folder. The parameter file can be found in [here](https://drive.google.com/open?id=0B_M7XF_l0CzXX3V3WXJoUnNKZFE).
 
